@@ -4,12 +4,15 @@ import { graphql } from 'gatsby'
 export default function Blog({data}) {
   console.log(data)
   return (
-    <div>
+
       <div>{data.allMarkdownRemark.edges.map(post => (
-        <div>{post.node.frontmatter.title}</div>
+        <>
+          <h1>{post.node.frontmatter.title}</h1>
+          <h3>{post.node.frontmatter.description}</h3>
+          <div dangerouslySetInnerHTML={{__html: post.node.html}} />
+        </>
       )
       )}</div>
-    </div>
     )
 }
 
