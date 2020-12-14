@@ -1,20 +1,38 @@
-import React from "react"
-import { graphql } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
-export default function Blog({data}) {
-  console.log(data)
+import { BlogPost } from '../components/BlogPost.tsx';
+
+export default function Blog({ data }) {
+  const blogArray = data.allMarkdownRemark.edges;
+
   return (
 
-      <div>{data.allMarkdownRemark.edges.map(post => (
-        <>
-          <h1>{post.node.frontmatter.title}</h1>
-          <h3>{post.node.frontmatter.description}</h3>
-          <div dangerouslySetInnerHTML={{__html: post.node.html}} />
-        </>
-      )
-      )}</div>
-    )
+    <div>
+      {blogArray.map((post) => (
+        <BlogPost post={post.node} />
+      ))}
+
+    </div>
+  );
 }
+
+Blog.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.shape({
+        node: PropTypes.shape({
+          html: PropTypes.string,
+          frontmatter: PropTypes.shape({
+            title: PropTypes.string,
+            description: PropTypes.string,
+          }),
+        }),
+      })),
+    }),
+  }).isRequired,
+};
 
 export const query = graphql`
 query MyQuery {
@@ -32,4 +50,4 @@ query MyQuery {
     }
   }
 }
-`
+`;
