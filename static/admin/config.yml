@@ -36,5 +36,6 @@ collections:
       - { label: 'Date', name: 'date', widget: 'datetime', date_format: 'YYYY.MM' }
       - { label: 'Tech', name: 'tech', widget: 'list'}
       - { label: 'Link', name: 'link', widget: 'string'}
-      - { label: 'Source', name: source, wisget: 'string' }
+      - { label: 'Source', name: 'source', widget: 'string' }
+      - { label: 'Screenshot', name: 'screenshot', widget: 'image' }
       - { label: 'Body', name: 'body', widget: 'markdown'}
