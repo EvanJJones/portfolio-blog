@@ -3,15 +3,16 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import { Project } from '../components/Project.tsx';
+import Layout from '../components/Layout.tsx';
 
 export default function Projects({ data }) {
   const projectsArray = data.allMarkdownRemark.edges;
   return (
-    <div>
+    <Layout>
       {projectsArray.map((project) => (
         <Project project={project.node} key={project.node.id} />
       ))}
-    </div>
+    </Layout>
   );
 }
 

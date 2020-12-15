@@ -20,6 +20,6 @@ module.exports = {
       path: `${__dirname}/content/projects`,
     },
   },
-  'gatsby-transformer-remark'],
+  'gatsby-transformer-remark', 'gatsby-plugin-emotion'],
 
 };

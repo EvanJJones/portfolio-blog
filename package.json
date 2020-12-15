@@ -8,7 +8,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
@@ -16,12 +16,14 @@
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^1.0.0",
     "@chakra-ui/react": "^1.0.3",
+    "@emotion/eslint-plugin": "^11.0.0",
     "@emotion/react": "^11.1.2",
     "@emotion/styled": "^11.0.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-react": "^7.21.5",
     "framer-motion": "^2.9.5",
     "gatsby": "^2.26.1",
+    "gatsby-plugin-emotion": "^5.1.0",
     "gatsby-plugin-netlify-cms": "^4.6.0",
     "gatsby-source-filesystem": "^2.7.0",
     "gatsby-transformer-remark": "^2.12.0",

@@ -3,18 +3,19 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import { BlogPost } from '../components/BlogPost.tsx';
+import Layout from '../components/Layout.tsx';
 
 export default function Blog({ data }) {
   const blogArray = data.allMarkdownRemark.edges;
 
   return (
 
-    <div>
+    <Layout>
       {blogArray.map((post) => (
         <BlogPost post={post.node} key={post.node.id} />
       ))}
 
-    </div>
+    </Layout>
   );
 }
 
