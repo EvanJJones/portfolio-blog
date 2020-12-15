@@ -3,13 +3,21 @@ import PropTypes from 'prop-types';
 
 
 export const Project = ({project}) => {
+  const {html, frontmatter} = project
+  const image = frontmatter.screenshot.publicURL
+  console.log(frontmatter)
   return (
     <div>
-      <h1>{project.frontmatter.title}</h1>
-      <h3>{project.frontmatter.description}</h3>
-      <h3>{project.frontmatter.source}</h3>
-      <img src={project.frontmatter.screenshot.publicURL} />
-      <div dangerouslySetInnerHTML={{ __html: project.html }} />
+      <h1>{frontmatter.title}</h1>
+      <h3>{frontmatter.description}</h3>
+      <h3>{frontmatter.source}</h3>
+      <a href={`https://${frontmatter.link}`}><h3>Link</h3></a>
+      <a href={`https://${frontmatter.source}`}><h3>Source</h3></a>
+      <img src={image} />
+      {frontmatter.tech.map(item => (
+        <div key={item}>{item}</div>
+      ))}
+      <div dangerouslySetInnerHTML={{ __html: html }} />
     </div>
   )
 }
