@@ -1,11 +1,18 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import PropTypes, { string } from 'prop-types';
+import PropTypes from 'prop-types';
+
+import { Project } from '../components/Project.tsx';
 
 export default function Projects({ data }) {
-  console.log(data);
+  const projectsArray = data.allMarkdownRemark.edges;
+  console.log(projectsArray);
   return (
-    <div>This is the projects page</div>
+    <div>
+      {projectsArray.map((project) => (
+        <Project project={project.node} key={project.node.id} />
+      ))}
+    </div>
   );
 }
 
@@ -20,7 +27,10 @@ Projects.propTypes = {
             date: PropTypes.string,
             link: PropTypes.string,
             source: PropTypes.string,
-            tech: PropTypes.arrayOf(string),
+            tech: PropTypes.arrayOf(PropTypes.string),
+            screenshot: PropTypes.shape({
+              publicURL: PropTypes.string,
+            }),
           }),
         }),
       })),
@@ -41,6 +51,9 @@ query Projects {
           link
           source
           tech
+          screenshot {
+            publicURL
+          }
         }
       }
     }
