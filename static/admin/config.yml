@@ -37,5 +37,5 @@ collections:
       - { label: 'Tech', name: 'tech', widget: 'list'}
       - { label: 'Link', name: 'link', widget: 'string'}
       - { label: 'Source', name: 'source', widget: 'string' }
-      - { label: 'Screenshot', name: 'screenshot', widget: 'image' }
+      - { label: 'Screenshot', name: 'screenshot', widget: 'image', required: 'false' }
       - { label: 'Body', name: 'body', widget: 'markdown'}

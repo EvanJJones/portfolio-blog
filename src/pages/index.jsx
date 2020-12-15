@@ -1,10 +1,13 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
 
 export default function Home() {
   return (
-    <Box bg="tomato" w="100%" p={4} color="white">
-      This is the Box
-    </Box>
+    <div>
+      <div>
+        <h1>Evan Jones</h1>
+        <a href="https://linkedin.com/in/evanjjones/">linkedin </a>
+        <a href="https://github.com/evanjjones/">Github</a>
+      </div>
+    </div>
   );
 }
