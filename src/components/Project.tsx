@@ -5,7 +5,8 @@ import moment from 'moment'
 export const Project = ({project}) => {
   const {html, frontmatter} = project
   const image = frontmatter.screenshot.publicURL
-  const date = moment().format('MMMM YYYY')
+  const date = moment(frontmatter.date).format('MMM YYYY')
+
   return (
     <div>
       <h1>{frontmatter.title}</h1>
