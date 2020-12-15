@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import moment from 'moment'
 
 export const Project = ({project}) => {
   const {html, frontmatter} = project
   const image = frontmatter.screenshot.publicURL
-  console.log(frontmatter)
+  const date = moment().format('MMMM YYYY')
   return (
     <div>
       <h1>{frontmatter.title}</h1>
       <h3>{frontmatter.description}</h3>
-      <h3>{frontmatter.source}</h3>
+      <h3>{date}</h3>
       <a href={`https://${frontmatter.link}`}><h3>Link</h3></a>
       <a href={`https://${frontmatter.source}`}><h3>Source</h3></a>
       <img src={image} />

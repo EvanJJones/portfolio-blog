@@ -6,7 +6,6 @@ import { Project } from '../components/Project.tsx';
 
 export default function Projects({ data }) {
   const projectsArray = data.allMarkdownRemark.edges;
-  console.log(projectsArray);
   return (
     <div>
       {projectsArray.map((project) => (
