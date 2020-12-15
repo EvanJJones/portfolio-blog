@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 export const BlogPost = ({post}) => {
   return (
-    <div key={post.id}>
+    <div>
       <h1>{post.frontmatter.title}</h1>
       <h3>{post.frontmatter.description}</h3>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />

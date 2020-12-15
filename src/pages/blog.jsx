@@ -11,7 +11,7 @@ export default function Blog({ data }) {
 
     <div>
       {blogArray.map((post) => (
-        <BlogPost post={post.node} />
+        <BlogPost post={post.node} key={post.node.id} />
       ))}
 
     </div>
