@@ -36,7 +36,7 @@ Blog.propTypes = {
 
 export const query = graphql`
 query MyQuery {
-  allMarkdownRemark {
+  allMarkdownRemark(filter: {frontmatter: {source: {eq: null}, link: {eq: null}}}) {
     edges {
       node {
         id
