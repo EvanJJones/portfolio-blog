@@ -1,6 +1,7 @@
 import React from "react"
 import styled from '@emotion/styled';
 import {Timeline} from '../components/Timeline';
+import { Header } from '../components/Header';
 
 const Container = styled.div`
   
@@ -13,9 +14,10 @@ const Content = styled.div`
 export default function Layout({ children }) {
   return (
     <Container>
-      <Content>
-        {children}
-      </Content>
+      <Header />
+        <Content>
+          {children}
+        </Content>
       <Timeline />
     </Container>
   )
