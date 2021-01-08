@@ -1,6 +1,6 @@
 ---
 title: Memory Game
-date: 2020-12-08T00:58:49.290Z
+date: 2019-12-08T00:58:49.290Z
 for: Bootcamp
 tech:
   - React
