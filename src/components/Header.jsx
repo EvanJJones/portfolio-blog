@@ -6,14 +6,14 @@ const Container = styled.div`
   width: 100%;
   height: 5vh;
   background-color: beige;
-`
+`;
 
-export const Header = () => {
-  return (
-    <Container> 
-      <a href={"/"}>Home</a>
-      <a href={"blog"}>Blog</a>
-      <a href={"projects"}>Projects</a>
-    </Container>
-  )
-}
+const Header = () => (
+  <Container>
+    <a href="/">Home</a>
+    <a href="blog">Blog</a>
+    <a href="projects">Projects</a>
+  </Container>
+);
+
+export default Header;

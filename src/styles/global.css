@@ -1,4 +1,6 @@
 
-body {
+body, #___gatsby {
   margin: 0;
+  height: 100%;
+  background-color: #E7ECEF;
 }

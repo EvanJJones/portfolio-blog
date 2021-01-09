@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import { Project } from '../components/Project.tsx';
-import Layout from '../components/Layout.tsx';
+import Project from '../components/Project';
+import Layout from '../components/Layout';
 
 export default function Projects({ data }) {
   const projectsArray = data.allMarkdownRemark.edges;
@@ -48,6 +48,7 @@ query Projects {
         frontmatter {
           title
           date
+          for
           link
           source
           tech

@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 const Footer = styled.div`
@@ -7,14 +6,14 @@ const Footer = styled.div`
   bottom: 0;
   height: 3vh;
   width: 100%;
-  background-color: red;
+  background-color: ${(props) => props.theme.colors.timelineBackground};
   padding-left: 1rem;
-`
+`;
 
-export const Timeline = () => {
-  return (
-    <Footer>
-      Stuff here
-    </Footer>
-  )
-}
+const Timeline = () => (
+  <Footer>
+    Stuff here
+  </Footer>
+);
+
+export default Timeline;

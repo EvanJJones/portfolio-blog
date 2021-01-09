@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import { BlogPost } from '../components/BlogPost.tsx';
-import Layout from '../components/Layout.tsx';
+import BlogPost from '../components/BlogPost';
+import Layout from '../components/Layout';
 
 export default function Blog({ data }) {
   const blogArray = data.allMarkdownRemark.edges;
