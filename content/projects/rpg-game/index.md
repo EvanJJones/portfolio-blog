@@ -2,6 +2,7 @@
 title: RPG Game
 date: 2019-07-08T00:02:22.587Z
 for: Bootcamp
+type: Website
 tech:
   - HTML
   - CSS
