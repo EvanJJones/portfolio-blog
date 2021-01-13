@@ -2,6 +2,7 @@
 title: Fresh Eats
 date: 2019-12-08T00:55:26.605Z
 for: Bootcamp
+type: Website
 tech:
   - React
   - Node
