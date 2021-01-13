@@ -2,6 +2,7 @@
 title: Memory Game
 date: 2019-12-08T00:58:49.290Z
 for: Bootcamp
+type: Website
 tech:
   - React
 link: https://evanjjones.github.io/clicking-game/
