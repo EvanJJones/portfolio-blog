@@ -39,8 +39,8 @@ const Header = () => (
   <Container>
     <LinkContainer>
       <LinkItem href="/">Home</LinkItem>
-      <LinkItem href="blog">Blog</LinkItem>
-      <LinkItem href="projects">Projects</LinkItem>
+      <LinkItem href="/blog">Blog</LinkItem>
+      <LinkItem href="/projects">Projects</LinkItem>
     </LinkContainer>
   </Container>
 );
