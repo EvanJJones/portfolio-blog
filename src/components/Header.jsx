@@ -16,10 +16,16 @@ const LinkContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   border: 3px solid green;
   border-radius: 5px;
   height: 100%;
+  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+    width: 80%;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
+    width: 50%;
+  }
 `;
 
 const LinkItem = styled.a`
