@@ -40,8 +40,8 @@ const Name = styled.h1`
 `;
 
 const TextContainer = styled.div`
-  padding: 10rem;
-  font-size: 20px;
+  padding: 10%;
+  font-size: 1.75rem;
 `;
 
 export default function Home() {
@@ -52,7 +52,7 @@ export default function Home() {
           <Name>Evan Jones</Name>
           <ContactLinks />
           <TextContainer>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            I am a full-stack web developer with a certificate from Harvard Extension School. I love to make websites with HTML, CSS, Javascript, and React. Plus I make games with things like Maya, and Unity. I strive to make interesting, beautiful and challenging things.
           </TextContainer>
         </LeftDiv>
         <RightDiv>
