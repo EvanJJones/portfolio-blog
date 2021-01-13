@@ -30,7 +30,10 @@ const LinkContainer = styled.div`
 
 const LinkItem = styled.a`
   margin: 0 3rem 0 3rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+    font-size: 2rem;
+  }
 `;
 
 const Header = () => (
