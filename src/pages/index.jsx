@@ -27,7 +27,7 @@ const RightDiv = styled.div`
 const Name = styled.h1`
   font-size: 7rem;
   text-align: center;
-  margin-top: 0;
+  margin: 0;
 `;
 
 export default function Home() {

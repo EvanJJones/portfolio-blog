@@ -11,6 +11,8 @@ const Container = styled.div`
 const LinkBox = styled.div`
   border: 3px solid black;
   width: 25%;
+  text-align: center;
+  padding: .2rem;
 `;
 
 const ContactLinks = () => (
