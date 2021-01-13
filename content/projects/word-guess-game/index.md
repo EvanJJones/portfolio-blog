@@ -2,6 +2,7 @@
 title: Word Guess Game
 date: 2019-07-08T00:00:26.775Z
 for: Bootcamp
+type: Website
 tech:
   - HTML
   - CSS
