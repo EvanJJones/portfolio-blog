@@ -14,7 +14,7 @@ const Container = styled.div`
 const LinkContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   border: 3px solid green;
@@ -29,7 +29,6 @@ const LinkContainer = styled.div`
 `;
 
 const LinkItem = styled.a`
-  margin: 0 3rem 0 3rem;
   font-size: 1.5rem;
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     font-size: 2rem;
