@@ -1,19 +1,47 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Layout from '../components/Layout';
+import ContactLinks from '../components/ContactLinks';
 
-const TestDiv = styled.div`
-  color: red;
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  width: 100%;
+`;
+
+const LeftDiv = styled.div`
+  border: 3px solid red;
+  border-radius: 5px;
+  margin: 1rem;
+  width: 100%;
+`;
+
+const RightDiv = styled.div`
+  border: 3px solid blue;
+  border-radius: 5px;
+  margin: 1rem;
+  width: 100%;
+`;
+
+const Name = styled.h1`
+  font-size: 7rem;
+  text-align: center;
+  margin-top: 0;
 `;
 
 export default function Home() {
   return (
     <Layout>
-      <TestDiv>
-        <h1>Evan Jones</h1>
-        <a href="https://linkedin.com/in/evanjjones/">linkedin </a>
-        <a href="https://github.com/evanjjones/">Github</a>
-      </TestDiv>
+      <MainContainer>
+        <LeftDiv>
+          <Name>Evan Jones</Name>
+          <ContactLinks />
+        </LeftDiv>
+        <RightDiv>
+          Nothing
+        </RightDiv>
+      </MainContainer>
     </Layout>
   );
 }

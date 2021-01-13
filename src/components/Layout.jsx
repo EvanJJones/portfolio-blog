@@ -3,14 +3,7 @@ import styled from '@emotion/styled';
 import { ThemeProvider } from '@emotion/react';
 import Timeline from './Timeline';
 import Header from './Header';
-
-const theme = {
-  colors: {
-    background: '#E7ECEF',
-    headerBackground: 'white',
-    timelineBackground: 'white',
-  },
-};
+import theme from '../styles/theme';
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.colors.background};
@@ -19,7 +12,9 @@ const Container = styled.div`
 const Content = styled.div`
   margin-bottom: 4vh;
   margin-left: 1rem;
-  
+  margin-right: 1rem;
+  margin-top: 1rem;
+  height: 100%;
 `;
 
 export default function Layout({ children }) {
