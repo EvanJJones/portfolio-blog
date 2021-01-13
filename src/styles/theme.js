@@ -7,8 +7,8 @@ const theme = {
   breakpoints: {
     sm: '576px',
     md: '768px',
-    lrg: '992px',
-    xlrg: '1200px',
+    lg: '992px',
+    xlg: '1200px',
   },
 };
 
