@@ -7,6 +7,8 @@ import ContactLinks from '../components/ContactLinks';
 const MainContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   height: 80vh;
   width: 100%;
 `;
@@ -15,14 +17,20 @@ const LeftDiv = styled.div`
   border: 3px solid red;
   border-radius: 5px;
   margin: 1rem;
-  width: 100%;
+  width: 90%;
+  @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
+    width: 45%;
+  }
 `;
 
 const RightDiv = styled.div`
   border: 3px solid blue;
   border-radius: 5px;
   margin: 1rem;
-  width: 100%;
+  width: 90%;
+  @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
+    width: 45%;
+  }
 `;
 
 const Name = styled.h1`
