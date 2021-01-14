@@ -11,8 +11,6 @@ const Container = styled.div`
 `;
 const Content = styled.div`
   margin-bottom: 4vh;
-  margin-left: 1rem;
-  margin-right: 1rem;
   margin-top: 1rem;
   height: 100%;
 `;
