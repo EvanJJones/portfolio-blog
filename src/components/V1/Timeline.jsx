@@ -1,11 +1,12 @@
 import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 import styled from '@emotion/styled';
 
 const Footer = styled.div`
   position: fixed;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: left;
   bottom: 0;
   height: 4vh;
   width: 100%;
@@ -14,10 +15,31 @@ const Footer = styled.div`
   padding-left: 1rem;
 `;
 
-const Timeline = () => (
-  <Footer>
-    <a href="/V1/">V1</a>
-  </Footer>
-);
-
-export default Timeline;
+export default function Header() {
+  return (
+    <StaticQuery
+      query={graphql`
+      query Version {
+        allMarkdownRemark(filter: {html: {eq: ""}}) {
+          edges {
+            node {
+              frontmatter {
+                date
+                title
+              }
+            }
+          }
+        }
+      }
+      `}
+      render={(data) => (
+        <Footer>
+          <a href="/">Current</a>
+          {data.allMarkdownRemark.edges.map((version) => (
+            <a href={version.node.frontmatter.title}>{version.node.frontmatter.title}</a>
+          ))}
+        </Footer>
+      )}
+    />
+  );
+}
