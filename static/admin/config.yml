@@ -41,3 +41,16 @@ collections:
       - { label: 'Source', name: 'source', widget: 'string' }
       - { label: 'Screenshot', name: 'screenshot', widget: 'image', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown'}
+  - name: 'siteVersions'
+    label: 'Site Versions'
+    folder: 'content/versions'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime', date_format: 'YY/MM DD' }
