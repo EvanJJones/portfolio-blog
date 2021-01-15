@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <StaticQuery
       query={graphql`
-      query Version {
+      query VersionV1 {
         allMarkdownRemark(filter: {html: {eq: ""}}) {
           edges {
             node {
