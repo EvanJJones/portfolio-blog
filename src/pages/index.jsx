@@ -56,7 +56,7 @@ export default function Home() {
           </TextContainer>
         </LeftDiv>
         <RightDiv>
-          Nothing
+          <Name>Time</Name>
         </RightDiv>
       </MainContainer>
     </Layout>

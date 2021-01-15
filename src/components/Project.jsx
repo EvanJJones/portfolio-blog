@@ -13,7 +13,6 @@ const Container = styled.div`
   margin: 10px;
   padding: 10px;
   flex-wrap: wrap;
-  /* justify-content: center; */
   @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
     width: 40%;
   }
@@ -98,18 +97,6 @@ const Project = ({ project }) => {
           <Link href={frontmatter.source}>Source</Link>
         </LinkContainer>
       </ProjectInfo>
-      {/* <h1>{frontmatter.title}</h1>
-      <h3>{frontmatter.description}</h3>
-      <h3>{date}</h3>
-      <h3>{frontmatter.for}</h3>
-      <h3>{frontmatter.type}</h3>
-      <a href={frontmatter.link}><h3>Link</h3></a>
-      <a href={frontmatter.source}><h3>Source</h3></a>
-      <img src={image} alt={frontmatter.title} width="200px" height="200px" />
-      {frontmatter.tech.map((item) => (
-        <div key={item}>{item}</div>
-      ))}
-      <div dangerouslySetInnerHTML={{ __html: html }} /> */}
     </Container>
   );
 };
