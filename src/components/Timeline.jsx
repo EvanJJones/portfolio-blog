@@ -1,7 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from '@emotion/styled';
-import { node } from 'prop-types';
 
 const Footer = styled.div`
   position: fixed;
