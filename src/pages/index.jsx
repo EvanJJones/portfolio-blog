@@ -14,18 +14,22 @@ const MainContainer = styled.div`
 `;
 
 const LeftDiv = styled.div`
-  border: 3px solid red;
-  border-radius: 5px;
+  border: 2px solid red;
+  /* border-radius: 5px; */
   margin: 1rem;
   width: 90%;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
     width: 45%;
   }
 `;
 
 const RightDiv = styled.div`
-  border: 3px solid blue;
-  border-radius: 5px;
+  border: 2px solid blue;
+  /* border-radius: 5px; */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color: white;
   margin: 1rem;
   width: 90%;
   @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {

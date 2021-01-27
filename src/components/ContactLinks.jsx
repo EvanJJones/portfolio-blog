@@ -9,7 +9,8 @@ const Container = styled.div`
 `;
 
 const LinkBox = styled.div`
-  border: 3px solid black;
+  border: 2px solid black;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   width: 23%;
   text-align: center;
   padding: .2rem;

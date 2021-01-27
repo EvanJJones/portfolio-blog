@@ -11,7 +11,8 @@ const Footer = styled.div`
   height: 4vh;
   width: 100%;
   background-color: ${(props) => props.theme.colors.timelineBackground};
-  border-top: 3px solid greenyellow;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-top: 2px solid greenyellow;
   padding-left: 1rem;
 `;
 

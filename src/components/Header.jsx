@@ -12,13 +12,15 @@ const Container = styled.div`
 `;
 
 const LinkContainer = styled.div`
+background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  border: 3px solid green;
-  border-radius: 5px;
+  border: 2px solid green;
+  /* border-radius: 5px; */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   height: 100%;
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     width: 80%;
