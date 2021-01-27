@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
+import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
 import Layout from '../components/Layout';
 import ContactLinks from '../components/ContactLinks';
@@ -48,16 +49,17 @@ const TextContainer = styled.div`
   font-size: 1.75rem;
 `;
 
-export default function Home() {
+export default function Home({ data }) {
+  const info = data.allMarkdownRemark.edges;
+  const mainText = info[0].node.html;
+
   return (
     <Layout>
       <MainContainer>
         <LeftDiv>
           <Name>Evan Jones</Name>
           <ContactLinks />
-          <TextContainer>
-            I am a full-stack web developer with a certificate from Harvard Extension School. I love to make websites with HTML, CSS, Javascript, and React. Plus I make games with things like Maya, and Unity. I strive to make interesting, beautiful and challenging things.
-          </TextContainer>
+          <TextContainer dangerouslySetInnerHTML={{ __html: mainText }} />
         </LeftDiv>
         <RightDiv>
           <Name>Time</Name>
@@ -66,3 +68,19 @@ export default function Home() {
     </Layout>
   );
 }
+
+export const query = graphql`
+query basicInfoQuery {
+  allMarkdownRemark(filter: {frontmatter: {location: {ne: null}}}) {
+    edges {
+      node {
+        frontmatter {
+          location
+          title
+        }
+        html
+      }
+    }
+  }
+}
+`;

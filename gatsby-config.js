@@ -27,6 +27,13 @@ module.exports = {
       path: `${__dirname}/content/versions`,
     },
   },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'versions',
+      path: `${__dirname}/content/basicInfo`,
+    },
+  },
   'gatsby-transformer-remark', 'gatsby-plugin-emotion'],
 
 };

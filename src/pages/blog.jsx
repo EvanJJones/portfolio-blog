@@ -40,7 +40,7 @@ export default function Blog({ data }) {
 
 export const query = graphql`
 query MyQuery {
-  allMarkdownRemark(filter: {frontmatter: {source: {eq: null}, link: {eq: null}}}) {
+  allMarkdownRemark(filter: {frontmatter: {source: {eq: null}, link: {eq: null}, location: {eq: null}, description: {ne: null}}}) {
     edges {
       node {
         id
