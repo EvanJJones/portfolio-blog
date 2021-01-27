@@ -54,3 +54,17 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Date', name: 'date', widget: 'datetime', date_format: 'YY/MM DD' }
+  - name: 'basicInfo'
+    label: 'Basic Info'
+    folder: 'content/basicInfo'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Location', name: 'location', widget: 'string'}
+      - { label: 'Body', name: 'body', widget: 'markdown'}
