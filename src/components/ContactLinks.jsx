@@ -16,10 +16,14 @@ const LinkBox = styled.div`
   padding: .2rem;
 `;
 
+const Link = styled.a`
+  text-decoration: none;
+`;
+
 const ContactLinks = () => (
   <Container>
-    <LinkBox>Github</LinkBox>
-    <LinkBox>LinkedIn</LinkBox>
+    <LinkBox><Link href="https://github.com/EvanJJones">Github</Link></LinkBox>
+    <LinkBox><Link href="https://www.linkedin.com/in/evanjjones/">LinkedIn</Link></LinkBox>
     <LinkBox>Email</LinkBox>
   </Container>
 );

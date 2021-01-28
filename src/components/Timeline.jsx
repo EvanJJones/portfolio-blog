@@ -12,7 +12,7 @@ const Footer = styled.div`
   width: 100%;
   background-color: ${(props) => props.theme.colors.timelineBackground};
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  border-top: 2px solid greenyellow;
+  border-top: 2px solid ${(props) => props.theme.colors.timelineBorder};
   padding-left: 1rem;
 `;
 

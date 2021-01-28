@@ -11,8 +11,9 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 90%;
-  border: 3px solid blue;
-  border-radius: 5px;
+  border: 2px solid blue;
+  background-color: ${(props) => props.theme.colors.bodyBackground};
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   height: 100%;
   margin: auto;
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {

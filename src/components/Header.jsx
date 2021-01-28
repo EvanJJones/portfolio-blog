@@ -18,7 +18,7 @@ background-color: white;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  border: 2px solid green;
+  border: 2px solid ${(props) => props.theme.colors.headerBorder};
   /* border-radius: 5px; */
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   height: 100%;

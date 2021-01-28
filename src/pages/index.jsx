@@ -19,7 +19,7 @@ const LeftDiv = styled.div`
   /* border-radius: 5px; */
   margin: 1rem;
   width: 90%;
-  background-color: white;
+  background-color: ${(props) => props.theme.colors.bodyBackground};
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
     width: 45%;
@@ -30,7 +30,7 @@ const RightDiv = styled.div`
   border: 2px solid blue;
   /* border-radius: 5px; */
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  background-color: white;
+  background-color: ${(props) => props.theme.colors.bodyBackground};
   margin: 1rem;
   width: 90%;
   @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {

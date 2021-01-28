@@ -4,8 +4,9 @@ import styled from '@emotion/styled';
 import moment from 'moment';
 
 const Container = styled.div`
-  border: 3px solid gray;
-  border-radius: 5px;
+  border: 2px solid gray;
+  background-color: ${(props) => props.theme.colors.bodyBackground};
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   width: 100%;
   height: 20%auto;
   display: flex;
