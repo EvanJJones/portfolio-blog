@@ -12,14 +12,13 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.target;
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': form.getAttribute('name'),
-        'form-email': form.getAttribute('email'),
-        'form-message': form.getAttribute('message'),
+        'form-name': name,
+        'form-email': email,
+        'form-message': message,
       }),
     })
       .then()
