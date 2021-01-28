@@ -16,9 +16,10 @@ export default function Contact() {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': name,
-        'form-email': email,
-        'form-message': message,
+        'form-name': 'contact',
+        'contact-name': name,
+        'contact-email': email,
+        'contact-message': message,
       }),
     })
       .then()
