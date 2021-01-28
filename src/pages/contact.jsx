@@ -5,21 +5,21 @@ const encode = (data) => Object.keys(data)
   .join('&');
 
 export default function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [bot, setBot] = useState('');
+  const [state, setState] = useState({});
+
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const form = e.target;
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': 'contact',
-        'contact-name': name,
-        'contact-email': email,
-        'contact-message': message,
+        'form-name': form.getAttribute('name'),
+        ...state,
       }),
     })
       .then()
@@ -40,28 +40,28 @@ export default function Contact() {
       <p hidden>
         <label>
           Don’t fill this out:
-          <input name="bot-field" value={bot} onChange={(e) => setBot(e.target.value)} />
+          <input name="bot-field" onChange={handleChange} />
         </label>
       </p>
       <p>
         <label>
           Your name:
           <br />
-          <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
+          <input type="text" name="name" onChange={handleChange} />
         </label>
       </p>
       <p>
         <label>
           Your email:
           <br />
-          <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input type="email" name="email" onChange={handleChange} />
         </label>
       </p>
       <p>
         <label>
           Message:
           <br />
-          <textarea name="message" value={message} onChange={(e) => setMessage(e.target.value)} />
+          <textarea name="message" onChange={handleChange} />
         </label>
       </p>
       <p>
