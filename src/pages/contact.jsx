@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 
+const encode = (data) => Object.keys(data)
+  .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+  .join('&');
+
 export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -8,6 +12,18 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const form = e.target;
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        'form-email': form.getAttribute('email'),
+        'form-message': form.getAttribute('message'),
+      }),
+    })
+      .then()
+      .catch((error) => alert(error));
   };
 
   return (
@@ -24,7 +40,6 @@ export default function Contact() {
       <p hidden>
         <label>
           Don’t fill this out:
-          {' '}
           <input name="bot-field" value={bot} onChange={(e) => setBot(e.target.value)} />
         </label>
       </p>
