@@ -2,11 +2,11 @@ const theme = {
   colors: {
     background: '#E7ECEF',
     headerBackground: 'white',
-    headerBorder: 'green',
+    headerBorder: '#588B8B',
     timelineBackground: 'white',
-    timelineBorder: 'green',
+    timelineBorder: '#588B8B',
     bodyBackground: 'white',
-    bodyBorder: 'blue',
+    bodyBorder: '#F28F3B',
   },
   breakpoints: {
     sm: '576px',
@@ -15,5 +15,10 @@ const theme = {
     xlg: '1200px',
   },
 };
+
+// 588B8B steel Teal
+// FFD5C2 unbleached silk
+// F28F3B cadmium orange
+// C8553D cedar
 
 export default theme;
