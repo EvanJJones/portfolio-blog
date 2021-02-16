@@ -25,7 +25,7 @@ const LeftDiv = styled.div`
     width: 80%;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
-    width: 50%;
+    width: 65%;
   }
 `;
 
