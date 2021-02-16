@@ -18,6 +18,9 @@ const LinkBox = styled.div`
 
 const Link = styled.a`
   text-decoration: none;
+  font-size: 2rem;
+  font-family: 'Vollkorn', 'Bitter', serif;
+  color: #9e6231;
 `;
 
 const ContactLinks = () => (

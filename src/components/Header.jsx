@@ -34,9 +34,16 @@ const LinkContainer = styled.div`
 `;
 
 const LinkItem = styled.a`
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
   margin-right: 2rem;
   margin-left: 1rem;
+  text-decoration: none;
+  font-family: 'Vollkorn', 'Bitter', serif;
+  color: #003352;
+  &:hover {
+    color: #005d97;
+  }
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     font-size: 2rem;
     margin-right: 4rem;

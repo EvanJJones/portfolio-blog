@@ -24,6 +24,7 @@
     "framer-motion": "^2.9.5",
     "gatsby": "^2.26.1",
     "gatsby-plugin-emotion": "^5.1.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-netlify-cms": "^4.6.0",
     "gatsby-source-filesystem": "^2.7.0",
     "gatsby-transformer-remark": "^2.12.0",
