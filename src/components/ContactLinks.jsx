@@ -24,7 +24,7 @@ const ContactLinks = () => (
   <Container>
     <LinkBox><Link href="https://github.com/EvanJJones">Github</Link></LinkBox>
     <LinkBox><Link href="https://www.linkedin.com/in/evanjjones/">LinkedIn</Link></LinkBox>
-    <LinkBox>Email</LinkBox>
+    <LinkBox><Link href="/contact">Contact</Link></LinkBox>
   </Container>
 );
 

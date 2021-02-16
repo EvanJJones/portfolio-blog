@@ -21,9 +21,11 @@ const Container = styled.div`
 `;
 const Image = styled.img`
   width: 40%;
+  height: 60%;
   margin: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 90%;
+    height: 40%;
   }
 `;
 const ProjectInfo = styled.div`

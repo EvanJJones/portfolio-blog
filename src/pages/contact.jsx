@@ -1,72 +1,46 @@
-import React, { useState } from 'react';
+import React from 'react';
+import styled from '@emotion/styled';
+import Layout from '../components/Layout';
+import ContactForm from '../components/ContactForm';
+
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 80vh;
+  width: 100%;
+`;
+
+const Main = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 2px solid ${(props) => props.theme.colors.bodyBorder};
+  width: 90%;
+  background-color: ${(props) => props.theme.colors.bodyBackground};
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+    width: 80%;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
+    width: 50%;
+  }
+`;
 
 const encode = (data) => Object.keys(data)
   .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
   .join('&');
 
 export default function Contact() {
-  const [state, setState] = useState({});
-
-  const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
-    })
-      .then()
-      .catch((error) => alert(error));
-  };
-
   return (
-    <form
-      name="contact"
-      method="post"
-      action="/thanks/"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      onSubmit={handleSubmit}
-    >
-      {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-      <input type="hidden" name="form-name" value="contact" />
-      <p hidden>
-        <label>
-          Don’t fill this out:
-          <input name="bot-field" onChange={handleChange} />
-        </label>
-      </p>
-      <p>
-        <label>
-          Your name:
-          <br />
-          <input type="text" name="name" onChange={handleChange} />
-        </label>
-      </p>
-      <p>
-        <label>
-          Your email:
-          <br />
-          <input type="email" name="email" onChange={handleChange} />
-        </label>
-      </p>
-      <p>
-        <label>
-          Message:
-          <br />
-          <textarea name="message" onChange={handleChange} />
-        </label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form>
+    <Layout>
+      <MainContainer>
+        <Main>
+          <ContactForm />
+        </Main>
+      </MainContainer>
+    </Layout>
   );
 }
