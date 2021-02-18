@@ -17,7 +17,7 @@ const MainContainer = styled.div`
 const LeftDiv = styled.div`
   /* border: 2px solid ${(props) => props.theme.colors.bodyBorder}; */
   /* border-radius: 5px; */
-  /* margin: 1rem; */
+  margin: 0 0 2rem 0;
   width: 90%;
   background-color: ${(props) => props.theme.colors.bodyBackground};
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
@@ -29,29 +29,24 @@ const LeftDiv = styled.div`
   }
 `;
 
-// const RightDiv = styled.div`
-//   border: 2px solid ${(props) => props.theme.colors.bodyBorder};
-//   /* border-radius: 5px; */
-//   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-//   background-color: ${(props) => props.theme.colors.bodyBackground};
-//   margin: 1rem;
-//   width: 90%;
-//   @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
-//     width: 45%;
-//   }
-// `;
-
 const Name = styled.h1`
-  font-size: 7rem;
+  font-size: 3rem;
   font-family: 'Vollkorn', 'Bitter', serif;
   font-weight: 500;
   color: #3f6780;
-  text-align: center;
-  margin: 0 0 1rem 0;
+  text-align: left;
+  margin: 0 0 0 2rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+    font-size: 5rem;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
+    font-size: 5rem;
+    margin: 0 0 0 5rem;
+  }
 `;
 
 const TextContainer = styled.div`
-  padding: 5%;
+  padding: 0 5% 0 5%;
   font-size: 1.75rem;
   font-family: 'Montserrat', 'Bitter', serif;
   font-weight: 500;
@@ -66,8 +61,8 @@ export default function Home({ data }) {
       <MainContainer>
         <LeftDiv>
           <Name>Evan Jones</Name>
-          <ContactLinks />
           <TextContainer dangerouslySetInnerHTML={{ __html: mainText }} />
+          <ContactLinks />
         </LeftDiv>
         {/* <RightDiv>
           <Name>Time</Name>

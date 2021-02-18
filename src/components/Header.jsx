@@ -5,7 +5,8 @@ const Container = styled.div`
   width: 100%;
   height: 5vh;
   margin-top: 1rem;
-  background-color: ${(props) => props.theme.colors.background};
+  /* background-color: ${(props) => props.theme.colors.background}; */
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -14,6 +15,7 @@ const Container = styled.div`
 
 const LinkContainer = styled.div`
   /* background-color: white; */
+  background-color: #adbfca;
   padding: 1rem 0 1rem 0;
   margin: 1rem 0 1rem 0;
   display: flex;
@@ -29,12 +31,12 @@ const LinkContainer = styled.div`
     width: 80%;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
-    width: 50%;
+    width: 65%;
   }
 `;
 
 const LinkItem = styled.a`
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 500;
   margin-right: 2rem;
   margin-left: 1rem;
@@ -45,7 +47,7 @@ const LinkItem = styled.a`
     color: #005d97;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-right: 4rem;
     margin-left: 2rem;
   }

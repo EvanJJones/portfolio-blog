@@ -3,31 +3,33 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  width: 100%;
-`;
-
-const LinkBox = styled.div`
-  border: 2px solid black;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  width: 23%;
-  text-align: center;
-  padding: .2rem;
+  /* width: 100%; */
+  margin: 0 0 0 2rem;
 `;
 
 const Link = styled.a`
   text-decoration: none;
   font-size: 2rem;
   font-family: 'Vollkorn', 'Bitter', serif;
-  color: #9e6231;
+  color: #a15517;
+  margin: 0 0 0 1rem;
+  &:hover {
+    color: #c5a167;
+  }
+`;
+
+const ContactLabel = styled.span`
+  font-size: 2rem;
 `;
 
 const ContactLinks = () => (
   <Container>
-    <LinkBox><Link href="https://github.com/EvanJJones">Github</Link></LinkBox>
-    <LinkBox><Link href="https://www.linkedin.com/in/evanjjones/">LinkedIn</Link></LinkBox>
-    <LinkBox><Link href="/contact">Contact</Link></LinkBox>
+    <ContactLabel>Links:</ContactLabel>
+    <Link href="https://github.com/EvanJJones">Github</Link>
+    <Link href="https://www.linkedin.com/in/evanjjones/">LinkedIn</Link>
+    <Link href="/contact">Contact</Link>
   </Container>
 );
 
