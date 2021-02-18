@@ -10,7 +10,7 @@ const MainContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  height: 80vh;
+  /* height: 80vh; */
   width: 100%;
 `;
 
