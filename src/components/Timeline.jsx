@@ -21,17 +21,22 @@ export default function Header() {
     <StaticQuery
       query={graphql`
       query Version {
-        allMarkdownRemark(filter: {html: {eq: ""}}) {
+        allMarkdownRemark(filter: {frontmatter: {versionDate: {ne: null}}}) {
+          pageInfo {
+            perPage
+          }
           edges {
             node {
+              html
               frontmatter {
-                date
                 title
+                versionDate
               }
             }
           }
         }
       }
+      
       `}
       render={(data) => (
         <Footer>

@@ -11,7 +11,7 @@ const Container = styled.div`
 
 const Link = styled.a`
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: 'Vollkorn', 'Bitter', serif;
   color: #a15517;
   margin: 0 0 0 1rem;
