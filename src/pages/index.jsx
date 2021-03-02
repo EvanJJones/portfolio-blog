@@ -60,6 +60,7 @@ export default function Home({ data }) {
   return (
     <Layout>
       <Helmet>
+        <html lang="en" />
         <meta charSet="utf-8" />
         <title>Evan Jones Home</title>
         <meta name="description" content="Home of web developer Evan Jones" />

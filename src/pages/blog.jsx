@@ -30,6 +30,7 @@ export default function Blog({ data }) {
 
     <Layout>
       <Helmet>
+        <html lang="en" />
         <meta charSet="utf-8" />
         <title>Evan Jones Blog</title>
         <meta name="description" content="Blog of web developer Evan Jones" />

@@ -28,6 +28,7 @@ export default function Projects({ data }) {
   return (
     <Layout>
       <Helmet>
+        <html lang="en" />
         <meta charSet="utf-8" />
         <title>Evan Jones Projects</title>
         <meta name="description" content="List of projects done by Evan Jones" />

@@ -40,6 +40,7 @@ export default function Contact() {
   return (
     <Layout>
       <Helmet>
+        <html lang="en" />
         <meta charSet="utf-8" />
         <title>Contact</title>
         <meta name="description" content="Contact Evan Jones" />
