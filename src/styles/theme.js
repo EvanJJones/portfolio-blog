@@ -3,7 +3,7 @@ const theme = {
     background: '#E7ECEF',
     headerBackground: 'white',
     headerBorder: '#588B8B',
-    timelineBackground: 'white',
+    timelineBackground: '#adbfca',
     timelineBorder: '#588B8B',
     bodyBackground: 'white',
     bodyBorder: '#F28F3B',

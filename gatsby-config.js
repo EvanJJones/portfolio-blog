@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: ['gatsby-plugin-netlify-cms', {
+  plugins: ['gatsby-plugin-netlify-cms', 'gatsby-plugin-react-helmet', {
     resolve: 'gatsby-source-filesystem',
     options: {
       name: 'markdown-pages',

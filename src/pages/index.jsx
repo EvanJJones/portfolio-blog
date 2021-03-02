@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
 import Layout from '../components/Layout';
@@ -14,7 +15,7 @@ const MainContainer = styled.div`
   width: 100%;
 `;
 
-const LeftDiv = styled.div`
+const MainSection = styled.main`
   /* border: 2px solid ${(props) => props.theme.colors.bodyBorder}; */
   /* border-radius: 5px; */
   margin: 0 0 2rem 0;
@@ -58,15 +59,17 @@ export default function Home({ data }) {
 
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Evan Jones Home</title>
+        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+      </Helmet>
       <MainContainer>
-        <LeftDiv>
+        <MainSection>
           <Name>Evan Jones</Name>
           <TextContainer dangerouslySetInnerHTML={{ __html: mainText }} />
           <ContactLinks />
-        </LeftDiv>
-        {/* <RightDiv>
-          <Name>Time</Name>
-        </RightDiv> */}
+        </MainSection>
       </MainContainer>
     </Layout>
   );

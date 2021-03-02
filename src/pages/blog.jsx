@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
+import { Helmet } from 'react-helmet';
 
 import BlogPost from '../components/BlogPost';
 import Layout from '../components/Layout';
@@ -10,17 +11,15 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
-  border: 2px solid blue;
-  background-color: ${(props) => props.theme.colors.bodyBackground};
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  height: 100%;
   margin: auto;
+  width: 90%;
+  background-color: ${(props) => props.theme.colors.bodyBackground};
+  /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     width: 80%;
   }
   @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
-    width: 50%;
+    width: 65%;
   }
 `;
 
@@ -30,6 +29,11 @@ export default function Blog({ data }) {
   return (
 
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Evan Jones Blog</title>
+        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+      </Helmet>
       <Container>
         {blogArray.map((post) => (
           <BlogPost post={post.node} key={post.node.id} />

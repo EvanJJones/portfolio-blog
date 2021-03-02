@@ -4,28 +4,26 @@ import styled from '@emotion/styled';
 import moment from 'moment';
 
 const Container = styled.div`
-  border: 2px solid gray;
+  /* border: 2px solid gray; */
   background-color: ${(props) => props.theme.colors.bodyBackground};
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   width: 100%;
   height: 20%auto;
   display: flex;
   flex-direction: row;
-  margin: 10px;
-  padding: 10px;
   flex-wrap: wrap;
-  @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
-    width: 40%;
-  }
-  ;
+  margin-bottom: 2rem;
 `;
 const Image = styled.img`
-  width: 40%;
-  height: 60%;
-  margin: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    width: 90%;
-    height: 40%;
+  margin: .5rem;
+  max-width: 80%;
+  height: auto;
+  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+    max-width: 80%;
+
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
+    max-width: 40%;
   }
 `;
 const ProjectInfo = styled.div`
