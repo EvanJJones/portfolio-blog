@@ -32,7 +32,7 @@ export default function Blog({ data }) {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Evan Jones Blog</title>
-        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+        <meta name="description" content="Blog of web developer Evan Jones" />
       </Helmet>
       <Container>
         {blogArray.map((post) => (

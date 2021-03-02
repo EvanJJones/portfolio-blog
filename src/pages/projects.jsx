@@ -30,7 +30,7 @@ export default function Projects({ data }) {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Evan Jones Projects</title>
-        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+        <meta name="description" content="List of projects done by Evan Jones" />
       </Helmet>
       <Container>
         {projectsArray.map((project) => (

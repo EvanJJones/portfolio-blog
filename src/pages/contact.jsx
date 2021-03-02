@@ -42,7 +42,7 @@ export default function Contact() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Contact</title>
-        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+        <meta name="description" content="Contact Evan Jones" />
       </Helmet>
       <MainContainer>
         <Main>

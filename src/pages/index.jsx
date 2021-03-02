@@ -62,7 +62,7 @@ export default function Home({ data }) {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Evan Jones Home</title>
-        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+        <meta name="description" content="Home of web developer Evan Jones" />
       </Helmet>
       <MainContainer>
         <MainSection>
