@@ -13,14 +13,20 @@ const Container = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+  justify-content: center;
+  @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
+    justify-content: flex-start;
+  }
 `;
 const Image = styled.img`
   margin: .5rem;
   max-width: 80%;
+  max-height: 15rem;
+  width: auto;
   height: auto;
+  /* object-fit: cover; */
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     max-width: 80%;
-
   }
   @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
     max-width: 40%;
