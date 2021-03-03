@@ -52,7 +52,7 @@ query MyQuery {
         id
         frontmatter {
           title
-          date(formatString: "MMMM Do YYYY, h:mm a")
+          date(formatString: "MMMM Do YYYY")
           description
         }
         html
