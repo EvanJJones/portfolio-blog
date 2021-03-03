@@ -51,7 +51,7 @@ query Projects {
         html
         frontmatter {
           title
-          date
+          date(formatString: "MMMM YYYY")
           for
           link
           source

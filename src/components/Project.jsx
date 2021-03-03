@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import moment from 'moment';
-
 const Container = styled.div`
   /* border: 2px solid gray; */
   background-color: ${(props) => props.theme.colors.bodyBackground};
@@ -67,7 +65,7 @@ const Info = styled.span`
 const Project = ({ project }) => {
   const { html, frontmatter } = project;
   const image = frontmatter.screenshot.publicURL;
-  const date = moment(frontmatter.date).format('MMM YYYY');
+  const { date } = frontmatter;
   const tech = frontmatter.tech.join(', ');
 
   return (
