@@ -31,15 +31,16 @@
     "proptypes": "^1.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "zustand": "^3.3.3"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "prettier": "2.1.2",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-react": "^7.21.5"
+    "eslint-plugin-react": "^7.21.5",
+    "prettier": "2.1.2"
   },
   "repository": {
     "type": "git",

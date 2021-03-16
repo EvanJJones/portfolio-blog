@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import useDarkStore from '../state/useDarkStore';
 
 const Container = styled.div`
   /* border: 2px solid gray; */
-  background-color: ${(props) => props.theme.colors.bodyBackground};
+  background-color: ${(props) => (!props.dark ? props.theme.colors.bodyBackground : props.theme.altColors.bodyBackground)};
+  // props.theme.colors.bodyBackground};
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   width: 100%;
   height: 20%auto;
@@ -63,13 +65,16 @@ const Info = styled.span`
 `;
 
 const Project = ({ project }) => {
+  const dark = useDarkStore((state) => state.dark);
+  // const [darkBool, setDarkBool] = useState(true);
+
   const { html, frontmatter } = project;
   const image = frontmatter.screenshot.publicURL;
   const { date } = frontmatter;
   const tech = frontmatter.tech.join(', ');
 
   return (
-    <Container>
+    <Container dark={dark}>
       <Image src={image} alt={frontmatter.title} />
       <ProjectInfo>
         <Title>

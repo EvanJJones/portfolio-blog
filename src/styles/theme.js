@@ -1,12 +1,25 @@
 const theme = {
   colors: {
     background: '#E7ECEF',
-    headerBackground: 'white',
+    headerBackground: '#adbfca',
     headerBorder: '#588B8B',
     timelineBackground: '#adbfca',
     timelineBorder: '#588B8B',
     bodyBackground: 'white',
     bodyBorder: '#F28F3B',
+    headerLink: '#003352',
+    headerLinkHover: '#005d97',
+  },
+  altColors: {
+    background: 'white',
+    headerBackground: 'black',
+    headerBorder: 'black',
+    timelineBackground: 'green',
+    timelineBorder: 'green',
+    bodyBackground: 'yellow',
+    bodyBorder: 'red',
+    headerLink: 'white',
+    headerLinkHover: '#005d97',
   },
   breakpoints: {
     sm: '576px',

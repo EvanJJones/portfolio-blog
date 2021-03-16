@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import useDarkStore from '../state/useDarkStore';
 
 const Container = styled.div`
   width: 100%;
   height: 5vh;
   margin-top: 1rem;
-  /* background-color: ${(props) => props.theme.colors.background}; */
+  background-color: ${(props) => (!props.dark ? props.theme.colors.background : props.theme.altColors.background)};
 
   display: flex;
   flex-direction: row;
@@ -15,7 +16,7 @@ const Container = styled.div`
 
 const LinkContainer = styled.div`
   /* background-color: white; */
-  background-color: #adbfca;
+  background-color: ${(props) => (!props.dark ? props.theme.colors.headerBackground : props.theme.altColors.headerBackground)};
   padding: 1rem 0 1rem 0;
   margin: 1rem 0 1rem 0;
   display: flex;
@@ -42,9 +43,9 @@ const LinkItem = styled.a`
   margin-left: 1rem;
   text-decoration: none;
   font-family: 'Vollkorn', 'Bitter', serif;
-  color: #003352;
+  color: ${(props) => (!props.dark ? props.theme.colors.headerLink : props.theme.altColors.headerLink)};
   &:hover {
-    color: #005d97;
+    color: ${(props) => (!props.dark ? props.theme.colors.headerLinkHover : props.theme.altColors.headerLinkHover)};
   }
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     font-size: 2.5rem;
@@ -53,14 +54,18 @@ const LinkItem = styled.a`
   }
 `;
 
-const Header = () => (
-  <Container>
-    <LinkContainer>
-      <LinkItem href="/">Home</LinkItem>
-      <LinkItem href="/blog">Blog</LinkItem>
-      <LinkItem href="/projects">Projects</LinkItem>
-    </LinkContainer>
-  </Container>
-);
-
+const Header = () => {
+  const dark = useDarkStore((state) => state.dark);
+  const toggleDark = useDarkStore((state) => state.toggleDark);
+  return (
+    <Container dark={dark}>
+      <LinkContainer dark={dark}>
+        <LinkItem dark={dark} href="/">Home</LinkItem>
+        <LinkItem dark={dark} href="/blog">Blog</LinkItem>
+        <LinkItem dark={dark} href="/projects">Projects</LinkItem>
+        <button type="button" onClick={toggleDark}>Toggle</button>
+      </LinkContainer>
+    </Container>
+  );
+};
 export default Header;
