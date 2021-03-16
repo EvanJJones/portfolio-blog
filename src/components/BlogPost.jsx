@@ -3,6 +3,12 @@ import styled from '@emotion/styled';
 
 const PostContainer = styled.div`
   margin: 2rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+    width: 80%;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
+    width: 65%;
+  }
 `;
 
 export default function BlogPost({ post }) {
