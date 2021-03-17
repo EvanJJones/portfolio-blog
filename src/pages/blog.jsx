@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 
 import BlogPost from '../components/BlogPost';
 import Layout from '../components/Layout';
+import useDarkStore from '../state/useDarkStore';
 
 const Container = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ const Container = styled.div`
   align-items: center;
   margin: auto;
   width: 90%;
-  background-color: ${(props) => props.theme.colors.bodyBackground};
+  background-color: ${(props) => (!props.dark ? props.theme.colors.bodyBackground : props.theme.altColors.bodyBackground)};
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     width: 80%;
@@ -25,6 +26,7 @@ const Container = styled.div`
 
 export default function Blog({ data }) {
   const blogArray = data.allMarkdownRemark.edges;
+  const dark = useDarkStore((state) => state.dark);
 
   return (
 
@@ -35,7 +37,7 @@ export default function Blog({ data }) {
         <title>Evan Jones Blog</title>
         <meta name="description" content="Blog of web developer Evan Jones" />
       </Helmet>
-      <Container>
+      <Container dark={dark}>
         {blogArray.map((post) => (
           <BlogPost post={post.node} key={post.node.id} />
         ))}

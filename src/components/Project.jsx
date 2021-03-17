@@ -35,18 +35,22 @@ const Image = styled.img`
 const ProjectInfo = styled.div`
   width: 45%;
   margin: 1rem;
+  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 90%;
   }
 `;
 const Title = styled.div`
   font-size: 2rem;
+  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
 `;
 const Date = styled.span`
   font-size: 1.4rem;
+  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
 `;
 const Content = styled.div`
   font-size: 1.1rem;
+  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
 `;
 const LinkContainer = styled.div`
   display: flex;
@@ -55,18 +59,20 @@ const LinkContainer = styled.div`
 `;
 const Link = styled.a`
   font-size: 1.5rem;
+  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
 `;
 const Label = styled.div`
   font-size: 1.25rem;
   font-weight: 700;
+  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
 `;
 const Info = styled.span`
   font-weight: normal;
+  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
 `;
 
 const Project = ({ project }) => {
   const dark = useDarkStore((state) => state.dark);
-  // const [darkBool, setDarkBool] = useState(true);
 
   const { html, frontmatter } = project;
   const image = frontmatter.screenshot.publicURL;
@@ -77,34 +83,34 @@ const Project = ({ project }) => {
     <Container dark={dark}>
       <Image src={image} alt={frontmatter.title} />
       <ProjectInfo>
-        <Title>
+        <Title dark={dark}>
           {frontmatter.title}
           {' '}
-          <Date>{date}</Date>
+          <Date dark={dark}>{date}</Date>
         </Title>
-        <Content dangerouslySetInnerHTML={{ __html: html }} />
-        <Label>
+        <Content dark={dark} dangerouslySetInnerHTML={{ __html: html }} />
+        <Label dark={dark}>
           Type:
-          <Info>
+          <Info dark={dark}>
             {' '}
             {frontmatter.type}
           </Info>
         </Label>
-        <Label>
+        <Label dark={dark}>
           For:
-          <Info>
+          <Info dark={dark}>
             {' '}
             {frontmatter.for}
           </Info>
         </Label>
-        <Label>
+        <Label dark={dark}>
           Tech:
           {' '}
-          <Info>{tech}</Info>
+          <Info dark={dark}>{tech}</Info>
         </Label>
         <LinkContainer>
-          <Link href={frontmatter.link}>Link</Link>
-          <Link href={frontmatter.source}>Source</Link>
+          <Link dark={dark} href={frontmatter.link}>Link</Link>
+          <Link dark={dark} href={frontmatter.source}>Source</Link>
         </LinkContainer>
       </ProjectInfo>
     </Container>

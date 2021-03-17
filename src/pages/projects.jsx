@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 
 import Project from '../components/Project';
 import Layout from '../components/Layout';
+import useDarkStore from '../state/useDarkStore';
 
 const Container = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ const Container = styled.div`
   align-content: center;
   width: 90%;
   margin: auto;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${(props) => (!props.dark ? props.theme.colors.background : props.theme.altColors.background)};
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     width: 80%;
@@ -25,6 +26,7 @@ const Container = styled.div`
 
 export default function Projects({ data }) {
   const projectsArray = data.allMarkdownRemark.edges;
+  const dark = useDarkStore((state) => state.dark);
   return (
     <Layout>
       <Helmet>
@@ -33,7 +35,7 @@ export default function Projects({ data }) {
         <title>Evan Jones Projects</title>
         <meta name="description" content="List of projects done by Evan Jones" />
       </Helmet>
-      <Container>
+      <Container dark={dark}>
         {projectsArray.map((project) => (
           <Project project={project.node} key={project.node.id} />
         ))}

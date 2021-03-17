@@ -5,8 +5,9 @@ import useDarkStore from '../state/useDarkStore';
 const Container = styled.div`
   width: 100%;
   height: 5vh;
-  margin-top: 1rem;
-  background-color: ${(props) => (!props.dark ? props.theme.colors.background : props.theme.altColors.background)};
+  /* margin-top: 1rem; */
+  padding-top: 1rem;
+  /* background-color: ${(props) => props.theme.colors.background}; */
 
   display: flex;
   flex-direction: row;
