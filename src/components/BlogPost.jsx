@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const PostContainer = styled.div`
-  margin: 2rem;
+  margin: .75rem;
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     width: 80%;
   }

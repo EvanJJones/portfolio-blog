@@ -19,7 +19,7 @@ const MainSection = styled.main`
   /* border: 2px solid ${(props) => props.theme.colors.bodyBorder}; */
   /* border-radius: 5px; */
   margin: 0 0 2rem 0;
-  width: 90%;
+  width: 100%;
   background-color: ${(props) => props.theme.colors.bodyBackground};
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
@@ -48,9 +48,15 @@ const Name = styled.h1`
 
 const TextContainer = styled.div`
   padding: 0 5% 0 5%;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-family: 'Montserrat', 'Bitter', serif;
   font-weight: 500;
+  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+    font-size: 1.75rem;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
+    font-size: 1.75rem;
+  }
 `;
 
 export default function Home({ data }) {

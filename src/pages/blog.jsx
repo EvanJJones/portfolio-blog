@@ -12,7 +12,7 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   margin: auto;
-  width: 90%;
+  width: 100%;
   background-color: ${(props) => props.theme.colors.bodyBackground};
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
