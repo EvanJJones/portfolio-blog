@@ -3,8 +3,15 @@ import styled from '@emotion/styled';
 import useDarkStore from '../state/useDarkStore';
 
 const PostContainer = styled.div`
-  margin: 2rem;
+  margin: .75rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+    width: 80%;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.xlg}) {
+    width: 65%;
+  }
 `;
+
 const Title = styled.h1`
   color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
 `;
@@ -16,6 +23,8 @@ const Date = styled.h3`
 `;
 const Text = styled.div`
   color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  font-size: 1.25rem;
+  line-height: 26px;
 `;
 
 export default function BlogPost({ post }) {
