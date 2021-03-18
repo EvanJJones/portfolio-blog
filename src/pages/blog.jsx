@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
 import { Helmet } from 'react-helmet';
@@ -27,6 +27,14 @@ const Container = styled.div`
 export default function Blog({ data }) {
   const blogArray = data.allMarkdownRemark.edges;
   const dark = useDarkStore((state) => state.dark);
+  const toggleDark = useDarkStore((state) => state.toggleDark);
+
+  useEffect(() => {
+    if (dark) {
+      toggleDark();
+      toggleDark();
+    }
+  }, []);
 
   return (
 
