@@ -5,6 +5,9 @@ const useDarkStore = create(persist((set, get) => ({
   dark: false,
   toggleDark: () => set({ dark: !get().dark }),
 }),
-{ name: 'dark-mode' }));
+{
+  name: 'dark-mode',
+  getStorage: () => sessionStorage,
+}));
 
 export default useDarkStore;
