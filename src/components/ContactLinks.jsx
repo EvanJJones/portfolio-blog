@@ -23,7 +23,7 @@ const Link = styled.a`
 
 const ContactLabel = styled.span`
   font-size: 2rem;
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: ${(props) => (!props.dark ? props.theme.colors.contactLabel : props.theme.altColors.contactLabel)};
 `;
 
 const ContactLinks = () => {

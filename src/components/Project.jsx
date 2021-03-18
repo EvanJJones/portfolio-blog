@@ -42,7 +42,7 @@ const ProjectInfo = styled.div`
 `;
 const Title = styled.div`
   font-size: 2rem;
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: ${(props) => (!props.dark ? props.theme.colors.projectTitle : props.theme.altColors.projectTitle)};
 `;
 const Date = styled.span`
   font-size: 1.4rem;
@@ -59,12 +59,12 @@ const LinkContainer = styled.div`
 `;
 const Link = styled.a`
   font-size: 1.5rem;
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: ${(props) => (!props.dark ? props.theme.colors.projectLink : props.theme.altColors.projectLink)};
 `;
 const Label = styled.div`
   font-size: 1.25rem;
   font-weight: 700;
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: ${(props) => (!props.dark ? props.theme.colors.projectTitle : props.theme.altColors.projectTitle)};
 `;
 const Info = styled.span`
   font-weight: normal;
