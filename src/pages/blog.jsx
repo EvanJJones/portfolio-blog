@@ -30,10 +30,8 @@ export default function Blog({ data }) {
   const toggleDark = useDarkStore((state) => state.toggleDark);
 
   useEffect(() => {
-    if (dark) {
-      toggleDark();
-      toggleDark();
-    }
+    toggleDark();
+    toggleDark();
   }, []);
 
   return (
