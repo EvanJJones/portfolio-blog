@@ -33,6 +33,7 @@ export default function Blog({ data }) {
     if (dark) {
       setDarkMode(true);
     }
+    console.log(dark);
   }, []);
 
   return (
