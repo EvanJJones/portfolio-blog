@@ -27,11 +27,10 @@ const Container = styled.div`
 export default function Blog({ data }) {
   const blogArray = data.allMarkdownRemark.edges;
   const dark = useDarkStore((state) => state.dark);
-  const toggleDark = useDarkStore((state) => state.toggleDark);
+  // const toggleDark = useDarkStore((state) => state.toggleDark);
 
   useEffect(() => {
-    toggleDark();
-    toggleDark();
+    console.log(dark);
   }, []);
 
   return (
