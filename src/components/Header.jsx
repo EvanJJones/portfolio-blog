@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import useDarkStore from '../state/useDarkStore';
 
@@ -56,13 +56,20 @@ const LinkItem = styled.a`
 `;
 
 const Header = () => {
+  const [localDark, setLocalDark] = useState(false);
   const dark = useDarkStore((state) => state.dark);
   const toggleDark = useDarkStore((state) => state.toggleDark);
+
+  useEffect(() => {
+    if (dark) {
+      setLocalDark(true);
+    }
+  }, []);
   return (
-    <Container dark={dark}>
-      <LinkContainer dark={dark}>
-        <LinkItem dark={dark} href="/">Home</LinkItem>
-        <LinkItem dark={dark} href="/blog">Blog</LinkItem>
+    <Container dark={localDark}>
+      <LinkContainer dark={localDark}>
+        <LinkItem dark={localDark} href="/">Home</LinkItem>
+        <LinkItem dark={localDark} href="/blog">Blog</LinkItem>
         <LinkItem dark={dark} href="/projects">Projects</LinkItem>
         <button type="button" onClick={toggleDark}>Toggle</button>
       </LinkContainer>
