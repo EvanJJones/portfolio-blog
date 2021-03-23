@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
+import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import useDarkStore from '../state/useDarkStore';
 
 const Container = styled.div`
@@ -17,7 +18,7 @@ const Container = styled.div`
 
 const LinkContainer = styled.div`
   /* background-color: white; */
-  background-color: ${(props) => (!props.dark ? props.theme.colors.headerBackground : props.theme.altColors.headerBackground)};
+  background-color: var(--bg);
   padding: 1rem 0 1rem 0;
   margin: 1rem 0 1rem 0;
   display: flex;
@@ -56,22 +57,28 @@ const LinkItem = styled.a`
 `;
 
 const Header = () => {
-  const [localDark, setLocalDark] = useState(false);
   const dark = useDarkStore((state) => state.dark);
-  const toggleDark = useDarkStore((state) => state.toggleDark);
+  // const toggleDark = useDarkStore((state) => state.toggleDark);
 
-  useEffect(() => {
-    if (dark) {
-      setLocalDark(true);
-    }
-  }, []);
   return (
-    <Container dark={localDark}>
-      <LinkContainer dark={localDark}>
-        <LinkItem dark={localDark} href="/">Home</LinkItem>
-        <LinkItem dark={localDark} href="/blog">Blog</LinkItem>
+    <Container dark={dark}>
+      <LinkContainer dark={dark}>
+        <LinkItem dark={dark} href="/">Home</LinkItem>
+        <LinkItem dark={dark} href="/blog">Blog</LinkItem>
         <LinkItem dark={dark} href="/projects">Projects</LinkItem>
-        <button type="button" onClick={toggleDark}>Toggle</button>
+        <ThemeToggler>
+          {({ theme, toggleTheme }) => (
+            <label>
+              <input
+                type="checkbox"
+                onChange={(e) => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                checked={theme === 'dark'}
+              />
+              {' '}
+              Dark mode
+            </label>
+          )}
+        </ThemeToggler>
       </LinkContainer>
     </Container>
   );

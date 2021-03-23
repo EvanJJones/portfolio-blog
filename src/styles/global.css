@@ -3,3 +3,11 @@ body, #___gatsby {
   margin: 0;
   height: 100%;
 }
+
+body {
+  --bg: yellow;
+}
+
+body.dark {
+  --bg: black;
+}
