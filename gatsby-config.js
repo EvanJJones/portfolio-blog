@@ -70,6 +70,6 @@ module.exports = {
       },
     },
   },
-  'gatsby-transformer-remark', 'gatsby-plugin-emotion'],
+  'gatsby-transformer-remark', 'gatsby-plugin-emotion', 'gatsby-plugin-dark-mode'],
 
 };
