@@ -13,16 +13,16 @@ const PostContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: var(--text);
 `;
 const Description = styled.h3`
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: var(--text);
 `;
 const Date = styled.h3`
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: var(--text);
 `;
 const Text = styled.div`
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: var(--text);
   font-size: 1.25rem;
   line-height: 26px;
 `;

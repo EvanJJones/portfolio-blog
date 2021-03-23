@@ -21,7 +21,7 @@ const MainSection = styled.main`
   /* border-radius: 5px; */
   margin: 0 0 2rem 0;
   width: 100%;
-  background-color: ${(props) => (!props.dark ? props.theme.colors.bodyBackground : props.theme.altColors.bodyBackground)};
+  background-color: var(--bodyBackground);
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     width: 80%;
@@ -35,7 +35,7 @@ const Name = styled.h1`
   font-size: 3rem;
   font-family: 'Vollkorn', 'Bitter', serif;
   font-weight: 500;
-  color: ${(props) => (!props.dark ? props.theme.colors.nameColor : props.theme.altColors.nameColor)};
+  color: var(--nameColor);
   text-align: left;
   margin: 0 0 0 2rem;
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
@@ -52,7 +52,7 @@ const TextContainer = styled.div`
   font-size: 1.25rem;
   font-family: 'Montserrat', 'Bitter', serif;
   font-weight: 500;
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: var(--text);
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     font-size: 1.75rem;
   }

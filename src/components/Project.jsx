@@ -4,7 +4,7 @@ import useDarkStore from '../state/useDarkStore';
 
 const Container = styled.div`
   /* border: 2px solid gray; */
-  background-color: ${(props) => (!props.dark ? props.theme.colors.bodyBackground : props.theme.altColors.bodyBackground)};
+  background-color: var(--bodyBackground);
   // props.theme.colors.bodyBackground};
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   width: 100%;
@@ -35,22 +35,22 @@ const Image = styled.img`
 const ProjectInfo = styled.div`
   width: 45%;
   margin: 1rem;
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: var(--text);
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 90%;
   }
 `;
 const Title = styled.div`
   font-size: 2rem;
-  color: ${(props) => (!props.dark ? props.theme.colors.projectTitle : props.theme.altColors.projectTitle)};
+  color: var(--text);
 `;
 const Date = styled.span`
   font-size: 1.4rem;
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: var(--text);
 `;
 const Content = styled.div`
   font-size: 1.1rem;
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: var(--text);
 `;
 const LinkContainer = styled.div`
   display: flex;
@@ -59,16 +59,16 @@ const LinkContainer = styled.div`
 `;
 const Link = styled.a`
   font-size: 1.5rem;
-  color: ${(props) => (!props.dark ? props.theme.colors.projectLink : props.theme.altColors.projectLink)};
+  color: var(--projectLink);
 `;
 const Label = styled.div`
   font-size: 1.25rem;
   font-weight: 700;
-  color: ${(props) => (!props.dark ? props.theme.colors.projectTitle : props.theme.altColors.projectTitle)};
+  color: var(--projectTitle);
 `;
 const Info = styled.span`
   font-weight: normal;
-  color: ${(props) => (!props.dark ? props.theme.colors.text : props.theme.altColors.text)};
+  color: var(--text);
 `;
 
 const Project = ({ project }) => {

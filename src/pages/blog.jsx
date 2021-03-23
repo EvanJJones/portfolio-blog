@@ -14,7 +14,7 @@ const Container = styled.div`
   align-items: center;
   margin: auto;
   width: 100%;
-  background-color: ${(props) => (!props.dark ? props.theme.colors.bodyBackground : props.theme.altColors.bodyBackground)};
+  background-color: var(--bodyBackground);
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     width: 80%;

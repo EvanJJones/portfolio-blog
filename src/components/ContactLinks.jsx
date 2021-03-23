@@ -14,16 +14,16 @@ const Link = styled.a`
   text-decoration: none;
   font-size: 1.5rem;
   font-family: 'Vollkorn', 'Bitter', serif;
-  color: ${(props) => (!props.dark ? props.theme.colors.contactLink : props.theme.altColors.contactLink)};
+  color: var(--contactLink);
   margin: 0 0 0 1rem;
   &:hover {
-    color: ${(props) => (!props.dark ? props.theme.colors.contactLinkHover : props.theme.altColors.contactLinkHover)};
+    color: var(--contactLinkHover);
   }
 `;
 
 const ContactLabel = styled.span`
   font-size: 2rem;
-  color: ${(props) => (!props.dark ? props.theme.colors.contactLabel : props.theme.altColors.contactLabel)};
+  color: var(--contactLabel);
 `;
 
 const ContactLinks = () => {

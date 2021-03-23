@@ -12,7 +12,7 @@ const Footer = styled.div`
   bottom: 0;
   height: 4vh;
   width: 100%;
-  background-color: ${(props) => (!props.dark ? props.theme.colors.timelineBackground : props.theme.altColors.timelineBackground)};
+  background-color: var(--timelineBackground);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   /* border-top: 2px solid ${(props) => props.theme.colors.timelineBorder}; */
   padding-left: 1rem;
@@ -21,9 +21,9 @@ const Footer = styled.div`
 const Link = styled.a`
   margin: 0 1rem 0 1rem;
   text-decoration: none;
-  color: ${(props) => (!props.dark ? props.theme.colors.timelineText : props.theme.altColors.timelineText)};
+  color: var(--timelineText);
   &:hover {
-    color: ${(props) => (!props.dark ? props.theme.colors.timelineTextHover : props.theme.altColors.timelineTextHover)};
+    color: var(--timelineTextHover);
   }
 `;
 

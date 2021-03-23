@@ -18,7 +18,7 @@ const Container = styled.div`
 
 const LinkContainer = styled.div`
   /* background-color: white; */
-  background-color: var(--bg);
+  background-color: var(--headerBackground);
   padding: 1rem 0 1rem 0;
   margin: 1rem 0 1rem 0;
   display: flex;
@@ -45,9 +45,9 @@ const LinkItem = styled.a`
   margin-left: 1rem;
   text-decoration: none;
   font-family: 'Vollkorn', 'Bitter', serif;
-  color: ${(props) => (!props.dark ? props.theme.colors.headerLink : props.theme.altColors.headerLink)};
+  color: var(--headerLink);
   &:hover {
-    color: ${(props) => (!props.dark ? props.theme.colors.headerLinkHover : props.theme.altColors.headerLinkHover)};
+    color: var(--headerLinkHover);
   }
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     font-size: 2.5rem;

@@ -7,7 +7,7 @@ import theme from '../styles/theme';
 import useDarkStore from '../state/useDarkStore';
 
 const Container = styled.div`
-  background-color: ${(props) => (!props.dark ? props.theme.colors.background : props.theme.altColors.background)};
+  background-color: var(--background);
   height: 100%;
 `;
 const Content = styled.div`
