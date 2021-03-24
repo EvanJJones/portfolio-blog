@@ -67,17 +67,22 @@ const Header = () => {
         <LinkItem dark={dark} href="/blog">Blog</LinkItem>
         <LinkItem dark={dark} href="/projects">Projects</LinkItem>
         <ThemeToggler>
-          {({ theme, toggleTheme }) => (
-            <label>
-              <input
-                type="checkbox"
-                onChange={(e) => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                checked={theme === 'dark'}
-              />
-              {' '}
-              Dark mode
-            </label>
-          )}
+          {({ theme, toggleTheme }) => {
+            if (theme == null) {
+              return null;
+            }
+            return (
+              <label>
+                <input
+                  type="checkbox"
+                  onChange={(e) => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                  checked={theme === 'dark'}
+                />
+                {' '}
+                Dark mode
+              </label>
+            );
+          }}
         </ThemeToggler>
       </LinkContainer>
     </Container>
