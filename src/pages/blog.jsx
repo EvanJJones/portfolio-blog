@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
 import { Helmet } from 'react-helmet';
 
 import BlogPost from '../components/BlogPost';
 import Layout from '../components/Layout';
-import useDarkStore from '../state/useDarkStore';
 
 const Container = styled.div`
   display: flex;
@@ -26,15 +25,6 @@ const Container = styled.div`
 
 export default function Blog({ data }) {
   const blogArray = data.allMarkdownRemark.edges;
-  const dark = useDarkStore((state) => state.dark);
-  const setDarkMode = useDarkStore((state) => state.setDarkMode);
-
-  useEffect(() => {
-    if (dark) {
-      setDarkMode(true);
-    }
-    console.log(dark);
-  }, []);
 
   return (
 
@@ -45,7 +35,7 @@ export default function Blog({ data }) {
         <title>Evan Jones Blog</title>
         <meta name="description" content="Blog of web developer Evan Jones" />
       </Helmet>
-      <Container dark={dark}>
+      <Container>
         {blogArray.map((post) => (
           <BlogPost post={post.node} key={post.node.id} />
         ))}

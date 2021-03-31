@@ -23,6 +23,9 @@ body {
   --projectTitle: black;
   --projectLink: ;
   --text: black;
+  --switchBackgroundUnchecked: #ccc;
+  --switchBackgroundChecked: #ff9717;
+  --switchToggle: white;
 }
 
 body.dark {
@@ -43,4 +46,7 @@ body.dark {
   --projectTitle: #f7f7f7;
   --projectLink: #29d9b3;
   --text: #BDBDBD;
+  --switchBackgroundUnchecked: #ccc;
+  --switchBackgroundChecked: #ff9717;
+  --switchToggle: white;
 }

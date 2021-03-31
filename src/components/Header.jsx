@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { ThemeToggler } from 'gatsby-plugin-dark-mode';
+import Switch from './Switch';
 import useDarkStore from '../state/useDarkStore';
 
 const Container = styled.div`
@@ -66,24 +66,7 @@ const Header = () => {
         <LinkItem dark={dark} href="/">Home</LinkItem>
         <LinkItem dark={dark} href="/blog">Blog</LinkItem>
         <LinkItem dark={dark} href="/projects">Projects</LinkItem>
-        <ThemeToggler>
-          {({ theme, toggleTheme }) => {
-            if (theme == null) {
-              return null;
-            }
-            return (
-              <label>
-                <input
-                  type="checkbox"
-                  onChange={(e) => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                  checked={theme === 'dark'}
-                />
-                {' '}
-                Dark mode
-              </label>
-            );
-          }}
-        </ThemeToggler>
+        <Switch />
       </LinkContainer>
     </Container>
   );
