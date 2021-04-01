@@ -2,5 +2,57 @@
 body, #___gatsby {
   margin: 0;
   height: 100%;
-  background-color: #E7ECEF;
+  background-color: var(--background);
+}
+
+body {
+  --background: #E7ECEF;
+  --headerBackground: #adbfca;
+  --headerBorder: #588B8B;
+  --timelineBackground: #adbfca;
+  --timelineText: #3a2512;
+  --timelineTextHover: #005d97;
+  --bodyBackground: white;
+  --bodyBorder: #F28F3B;
+  --headerLink: #003352;
+  --headerLinkHover: #005d97;
+  --nameColor: #3f6780;
+  --contactLink: #a15517;
+  --contactLinkHover: #c5a167;
+  --contactLabel: black;
+  --projectTitle: black;
+  --projectLink: ;
+  --text: black;
+  --switchBackgroundUnchecked: #4287f5;
+  --switchBackgroundChecked: #ff9717;
+  --switchToggle: white;
+  --switchLabel: black;
+}
+
+body.dark {
+  --background: #121212;
+  --headerBackground: #2b2b2b;
+  --headerBorder: black;
+  --timelineBackground: #2b2b2b;
+  --timelineText: #29d9b3;
+  --timelineTextHover: gray;
+  --bodyBackground: #242424;
+  --bodyBorder: red;
+  --headerLink: #29d9b3;
+  --headerLinkHover: gray;
+  --nameColor: #f7f7f7;
+  --contactLink: #29d9b3;
+  --contactLinkHover: gray;
+  --contactLabel: #f7f7f7;
+  --projectTitle: #f7f7f7;
+  --projectLink: #29d9b3;
+  --text: #BDBDBD;
+  --switchBackgroundUnchecked: #4287f5;
+  --switchBackgroundChecked: #ff9717;
+  --switchToggle: white;
+  --switchLabel: white;
+}
+
+body.dark a:visited {
+  color: #29d9b3;
 }

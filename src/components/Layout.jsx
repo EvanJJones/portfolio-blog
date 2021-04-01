@@ -4,9 +4,10 @@ import { ThemeProvider } from '@emotion/react';
 import Timeline from './Timeline';
 import Header from './Header';
 import theme from '../styles/theme';
+import useDarkStore from '../state/useDarkStore';
 
 const Container = styled.div`
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: var(--background);
   height: 100%;
 `;
 const Content = styled.div`
@@ -16,9 +17,10 @@ const Content = styled.div`
 `;
 
 export default function Layout({ children }) {
+  const dark = useDarkStore((state) => state.dark);
   return (
     <ThemeProvider theme={theme}>
-      <Container>
+      <Container dark={dark}>
         <Header />
         <Content>
           {children}

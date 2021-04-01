@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Switch from './Switch';
+import useDarkStore from '../state/useDarkStore';
 
 const Container = styled.div`
   width: 100%;
   height: 5vh;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+  padding-top: 1rem;
   /* background-color: ${(props) => props.theme.colors.background}; */
 
   display: flex;
@@ -15,7 +18,7 @@ const Container = styled.div`
 
 const LinkContainer = styled.div`
   /* background-color: white; */
-  background-color: #adbfca;
+  background-color: var(--headerBackground);
   padding: 1rem 0 1rem 0;
   margin: 1rem 0 1rem 0;
   display: flex;
@@ -38,13 +41,13 @@ const LinkContainer = styled.div`
 const LinkItem = styled.a`
   font-size: 1.5rem;
   font-weight: 500;
-  margin-right: 2rem;
-  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-left: .5rem;
   text-decoration: none;
   font-family: 'Vollkorn', 'Bitter', serif;
-  color: #003352;
+  color: var(--headerLink);
   &:hover {
-    color: #005d97;
+    color: var(--headerLinkHover);
   }
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     font-size: 2.5rem;
@@ -53,14 +56,19 @@ const LinkItem = styled.a`
   }
 `;
 
-const Header = () => (
-  <Container>
-    <LinkContainer>
-      <LinkItem href="/">Home</LinkItem>
-      <LinkItem href="/blog">Blog</LinkItem>
-      <LinkItem href="/projects">Projects</LinkItem>
-    </LinkContainer>
-  </Container>
-);
+const Header = () => {
+  const dark = useDarkStore((state) => state.dark);
+  // const toggleDark = useDarkStore((state) => state.toggleDark);
 
+  return (
+    <Container dark={dark}>
+      <LinkContainer dark={dark}>
+        <LinkItem dark={dark} href="/">Home</LinkItem>
+        <LinkItem dark={dark} href="/blog">Blog</LinkItem>
+        <LinkItem dark={dark} href="/projects">Projects</LinkItem>
+        <Switch />
+      </LinkContainer>
+    </Container>
+  );
+};
 export default Header;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled from '@emotion/styled';
+import useDarkStore from '../state/useDarkStore';
 
 const Footer = styled.div`
   position: fixed;
@@ -11,7 +12,7 @@ const Footer = styled.div`
   bottom: 0;
   height: 4vh;
   width: 100%;
-  background-color: ${(props) => props.theme.colors.timelineBackground};
+  background-color: var(--timelineBackground);
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   /* border-top: 2px solid ${(props) => props.theme.colors.timelineBorder}; */
   padding-left: 1rem;
@@ -20,13 +21,14 @@ const Footer = styled.div`
 const Link = styled.a`
   margin: 0 1rem 0 1rem;
   text-decoration: none;
-  color: #3a2512;
+  color: var(--timelineText);
   &:hover {
-    color: #005d97;
+    color: var(--timelineTextHover);
   }
 `;
 
 export default function Header() {
+  const dark = useDarkStore((state) => state.dark);
   return (
     <StaticQuery
       query={graphql`
@@ -49,10 +51,12 @@ export default function Header() {
       
       `}
       render={(data) => (
-        <Footer>
-          <Link href="/">Current</Link>
+        <Footer dark={dark}>
+          <Link dark={dark} href="/">Current</Link>
           {data.allMarkdownRemark.edges.map((version) => (
-            <Link href={version.node.frontmatter.title}>{version.node.frontmatter.title}</Link>
+            <Link dark={dark} href={version.node.frontmatter.title}>
+              {version.node.frontmatter.title}
+            </Link>
           ))}
         </Footer>
       )}

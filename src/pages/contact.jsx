@@ -8,7 +8,7 @@ const MainContainer = styled.div`
   margin: 0 0 2rem 0;
   width: 90%;
   margin: auto;
-  background-color: ${(props) => props.theme.colors.bodyBackground};
+  background-color: var(--bodyBackground);
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     width: 80%;
@@ -26,7 +26,7 @@ const Main = styled.div`
   justify-content: space-around;
   /* border: 2px solid ${(props) => props.theme.colors.bodyBorder}; */
   width: 90%;
-  background-color: ${(props) => props.theme.colors.bodyBackground};
+  background-color: var(--bodyBackground);
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     width: 80%;
