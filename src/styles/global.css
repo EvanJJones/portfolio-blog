@@ -23,9 +23,10 @@ body {
   --projectTitle: black;
   --projectLink: ;
   --text: black;
-  --switchBackgroundUnchecked: #ccc;
+  --switchBackgroundUnchecked: #4287f5;
   --switchBackgroundChecked: #ff9717;
   --switchToggle: white;
+  --switchLabel: black;
 }
 
 body.dark {
@@ -46,7 +47,12 @@ body.dark {
   --projectTitle: #f7f7f7;
   --projectLink: #29d9b3;
   --text: #BDBDBD;
-  --switchBackgroundUnchecked: #ccc;
+  --switchBackgroundUnchecked: #4287f5;
   --switchBackgroundChecked: #ff9717;
   --switchToggle: white;
+  --switchLabel: white;
+}
+
+body.dark a:visited {
+  color: #29d9b3;
 }

@@ -2,6 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
 const SwitchInput = styled.input`
   opacity: 0;
   width: 0;
@@ -23,10 +29,10 @@ const Slider = styled.span`
     border-radius: 34px;
     position: absolute;
     content: "";
-    height: 13px;
-    width: 13px;
-    left: 2px;
-    bottom: 2px;
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
     background-color: var(--switchToggle);
     -webkit-transition: .4s;
     transition: .4s;
@@ -36,16 +42,21 @@ const Slider = styled.span`
 const SwitchLabel = styled.label`
   position: relative;
   display: inline-block;
-  width: 30px;
-  height: 17px;
+  width: 45px;
+  height: 25px;
   ${SwitchInput}:checked + ${Slider}:before {
-    -webkit-transform: translateX(13px);
-    -ms-transform: translateX(13px);
-    transform: translateX(13px);
+    -webkit-transform: translateX(19px);
+    -ms-transform: translateX(19px);
+    transform: translateX(19px);
   }
   ${SwitchInput}:checked + ${Slider} {
     background-color: var(--switchBackgroundChecked);
   }
+`;
+
+const SwitchText = styled.span`
+  color: var(--switchLabel);
+  margin-right: .5rem;
 `;
 
 const Switch = () => (
@@ -55,8 +66,10 @@ const Switch = () => (
         return null;
       }
       return (
-        <div>
-          Dark Mode
+        <Container>
+          <SwitchText>
+            Dark?
+          </SwitchText>
           <SwitchLabel>
             <SwitchInput
               type="checkbox"
@@ -65,7 +78,7 @@ const Switch = () => (
             />
             <Slider checked={theme === 'dark'} />
           </SwitchLabel>
-        </div>
+        </Container>
       );
     }}
   </ThemeToggler>
