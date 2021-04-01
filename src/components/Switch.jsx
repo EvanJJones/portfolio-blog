@@ -4,7 +4,7 @@ import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
 `;
 
@@ -56,7 +56,6 @@ const SwitchLabel = styled.label`
 
 const SwitchText = styled.span`
   color: var(--switchLabel);
-  margin-right: .5rem;
 `;
 
 const Switch = () => (

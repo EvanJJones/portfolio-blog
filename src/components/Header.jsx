@@ -41,8 +41,8 @@ const LinkContainer = styled.div`
 const LinkItem = styled.a`
   font-size: 1.5rem;
   font-weight: 500;
-  margin-right: 2rem;
-  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-left: .5rem;
   text-decoration: none;
   font-family: 'Vollkorn', 'Bitter', serif;
   color: var(--headerLink);
